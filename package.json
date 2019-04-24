@@ -1,0 +1,47 @@
+{
+  "name": "xml4jquery",
+  "version": "1.2.0",
+  "description": "jQuery reactive plugin to supply XML, XPath and XSLT functionality.",
+  "browser": "xml4jquery.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"OK. No CI available yet. Manual in-browser test available from project page.\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XmlAspect/xml4jquery.git"
+  },
+  "keywords": [
+    "xml",
+    "xslt",
+    "xpath",
+    "reactive",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "author": {
+    "name": "Sasha Firsov",
+    "email": "suns@simulationworks.com",
+    "url": "http://xml4jquery.com/"
+  },
+  "license": "xml4jquery.js",
+  "bugs": {
+    "url": "https://github.com/XmlAspect/xml4jquery/issues"
+  },
+  "homepage": "http://xml4jquery.com/",
+
+  "main": "xml4jquery.js",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "wct-mocha": "^1.0.0"
+  }
+}
