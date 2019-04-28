@@ -1,9 +1,9 @@
 # Goal
 Provide:
 * Wrapper around object or prototype API to make it 
-1. asynchronous
-2. dot operator chainable, 
-3. chain results available from within chain as callback parameters
+1. [asynchronous](docs/asynchronous.md)
+2. [dot operator chainable](docs/chainable.md), 
+3. [chain results](docs/chainresults.md) available from within chain as callback parameters
 4. interrupt/pause - able
 5. destroy-able
 6. repeatable/event-driven
