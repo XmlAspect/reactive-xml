@@ -1,14 +1,14 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
 /**
- * `xml4jquery-element`
+ * `reactive-xml`
  * 
  *
  * @customElement
  * @polymer
  * @demo demo/index.html
  */
-class Xml4jqueryElement extends PolymerElement {
+class ReactiveXml extends PolymerElement {
   static get template() {
     return html`
       <style>
@@ -23,10 +23,10 @@ class Xml4jqueryElement extends PolymerElement {
     return {
       prop1: {
         type: String,
-        value: 'xml4jquery-element',
+        value: 'reactive-xml',
       },
     };
   }
 }
 
-window.customElements.define('xml4jquery-element', Xml4jqueryElement);
+window.customElements.define('reactive-xml', ReactiveXml);

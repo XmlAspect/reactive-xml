@@ -22,6 +22,32 @@ Async( document.querySelectorAll('input') )       // NodeList API
 // todo multiple objects in Async initialization and inside of chain        
 ```
 
+## Callback vs CallChain
+There is a usual pattern of modifying the content of container initiated by event from container control.
+```javascript
+let container = document.getElementById("container-id");
+container.querySelector("button.action").addEventListener("tap", ev => container.querySelector('.content').innerHTML="Clicked" );
+```
+Using CallChain with dom convenience methods code above will have no callback
+```javascript
+$css('#container-id').$on( 'tap', $css('button.action') ).$css('.content').html('Clicked');
+```
+In this code first `$css()` call creates callchain with context of container. 
+
+`$on( )` is equivalent of event listener, which will pause the call chain execution till 'tap' event is fired. 
+
+Usually event source is not same as container but resides inside. To define the source the artificial argument is passed 
+to `$on()` call: `$css('button.action')`. Which defines the sub-scope inside of container.
+
+The chain after `on('tap')` will be executed every time the event is fired. It will find '.content' and reset its html. 
+
+Since tap event is bubbling, the scope on event call could be replaced by conditional chain execution:
+```javascript
+$css('#container-id').$on( 'tap' ).$if( ev=> ev.target.classList.contains('action') ).$css('.content').html('Clicked');
+```
+
+
+
 # then vs $then
 The async chain always return the mixin of API wrapper and Promise. 
 

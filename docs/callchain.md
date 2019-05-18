@@ -52,6 +52,4 @@ $a.c( 22 ).b(32); // another branch will be executed only after branch above
  Its value is not passed to call.  
 ```javascript
 CallChain( obj ).a( 10, CallResult.tag("a_tag") ).b(20).c( CallResult("a_tag") );// 1 10 2 20 30
-```  
-
-
+```

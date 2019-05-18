@@ -1,6 +1,19 @@
 # reactive-xml
 Asynchronous execution chain based on collections API with wrappers around  DHTML DOM API, jQuery and XML+XSLT+XPATH .
 
+Modules:
+* [CallChain](docs/callchain.md) - call chaining and parameters support 
+* [Asynchronous](docs/asyncronous.md) - reactive features over CallChain
+* Collections support
+* XML stack
+* NodeList support
+
+# Use
+
+# History and reasons of reactive-xml creation.
+https://www.apifusion.com/wiki/index.php/@xmlaspect/reactive-xml/History
+
+# development
 ## Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm 

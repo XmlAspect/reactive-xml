@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>xml4jquery-element test</title>
+    <title>reactive-xml test</title>
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
@@ -12,31 +12,31 @@
     <script src="../node_modules/chai/chai.js"></script>
     <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <script type="module" src="../xml4jquery-element.js"></script>
+    <script type="module" src="../reactive-xml.js"></script>
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <xml4jquery-element></xml4jquery-element>
+        <reactive-xml></reactive-xml>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <xml4jquery-element prop1="new-prop1"></xml4jquery-element>
+        <reactive-xml prop1="new-prop1"></reactive-xml>
       </template>
     </test-fixture>
 
     <script type="module">
-      suite('xml4jquery-element', () => {
+      suite('reactive-xml', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'xml4jquery-element');
+          assert.equal(element.prop1, 'reactive-xml');
           const elementShadowRoot = element.shadowRoot;
           const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello xml4jquery-element!');
+          assert.equal(elementHeader.innerHTML, 'Hello reactive-xml!');
         });
 
         test('setting a property on the element works', () => {
