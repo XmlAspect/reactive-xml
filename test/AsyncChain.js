@@ -2,25 +2,40 @@ import AyncChain from "../AsyncChain";
 
 suite('AsyncChain', () =>
 {
+setup(()=>
+{
 
+});
+teardown( ()=>
+{
+
+});
 test('instantiating ', () =>
 {
     debugger;
     AyncChain();
-  // const element = fixture('BasicTestFixture');
-  // assert.equal(element.prop1, 'reactive-xml');
-  // const elementShadowRoot = element.shadowRoot;
-  // const elementHeader = elementShadowRoot.querySelector('h2');
-  // assert.equal(elementHeader.innerHTML, 'Hello reactive-xml!');
 });
 
-test('setting a property on the element works', () => {
-  // Create a test fixture
-  // const element = fixture('ChangedPropertyTestFixture');
-  // assert.equal(element.prop1, 'new-prop1');
-  // const elementShadowRoot = element.shadowRoot;
-  // const elementHeader = elementShadowRoot.querySelector('h2');
-  // assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
+test('be executed in parallel asynchronous manner', () =>
+{
+    const stack = [];
+    const p = AyncChain([1,2,3])
+                .$then( x=> stack.push(x) )
+                .promise().then( x=> assert.equal( stack.join(''), '0123') );
+    stack.push(0); //
+    return p;
+});
+test('interrupt-able', () =>
+{
+
+});
+test('safe to re-start', () =>
+{
+
+});
+test('limited parallelism, permitting only defined number processing threads a time. ', () =>
+{
+
 });
 
 });
